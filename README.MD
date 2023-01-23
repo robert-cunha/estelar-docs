@@ -9,7 +9,7 @@ First of all, you should ask for the administrator of the system to release the 
 To create your user, you should call the following route. Replace the x-api-key header with the key the administrator gived to you.
 
 ```
-curl --location --request POST 'localhost/user' \
+curl --location --request POST '{{ESTELAR_API}}/user' \
 --header 'x-api-key: c21dd17d7f786c5d2869aae9a32ca1a3' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -55,7 +55,7 @@ The most important thing here, is the bearerToken. It will be used to list the g
 This route should be used only for the webhook. It uses the x-api-key instead of bearer token.
 
 ```
-curl --location --request POST 'localhost/game' \
+curl --location --request POST '{{ESTELAR_API}}/round' \
 --header 'x-api-key: c21dd17d7f786c5d2869aae9a32ca1a3' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -81,7 +81,7 @@ curl --location --request POST 'localhost/game' \
 You can list games and make some filters. Use the bearer toekn you've received before. On the Authorization header, put the word Bearer and paste the token.
 
 ```
-curl --location --request GET '{{ESTELAR_API}}/game' \
+curl --location --request GET '{{ESTELAR_API}}/round' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvYmVydC5jdW5oYUBlc3RyZWxhYmV0LmNvbSIsImRhdGUiOjE2NzI3NjEzMzg5ODEsImlhdCI6MTY3Mjc2MTMzOCwiZXhwIjoxNjcyODQ3NzM4fQ.7cBFFxZuS0cum7f8hzBSMgEZ81-pMRrHJzSoTaH3WFk'
 ```
 
