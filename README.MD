@@ -50,7 +50,7 @@ When you make this request, you should receive a response like this.
 
 The most important thing here, is the bearerToken. It will be used to list the games.
 
-## Create a game
+## Create a round
 
 This route should be used only for the webhook. It uses the x-api-key instead of bearer token.
 
@@ -76,9 +76,9 @@ curl --location --request POST '{{ESTELAR_API}}/round' \
 }'
 ```
 
-## List games
+## List rounds
 
-You can list games and make some filters. Use the bearer toekn you've received before. On the Authorization header, put the word Bearer and paste the token.
+You can list rounds and make some filters. Use the bearer toekn you've received before. On the Authorization header, put the word Bearer and paste the token.
 
 ```
 curl --location --request GET '{{ESTELAR_API}}/round' \
@@ -98,6 +98,6 @@ curl --location --request GET '{{ESTELAR_API}}/round' \
 ### Examples with Query Parameters
 
 ```
-curl --location --request GET '{{ESTELAR_API}}/game?page=0&limit=10&query={"winners":0}&sort={"roundId":-1}' \
+curl --location --request GET '{{ESTELAR_API}}/round?page=0&limit=10&query={"winners":0}&sort={"roundId":-1}' \
 --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InJvYmVydC5jdW5oYUBlc3RyZWxhYmV0LmNvbSIsImRhdGUiOjE2NzI3NjEzMzg5ODEsImlhdCI6MTY3Mjc2MTMzOCwiZXhwIjoxNjcyODQ3NzM4fQ.7cBFFxZuS0cum7f8hzBSMgEZ81-pMRrHJzSoTaH3WFk'
 ```
