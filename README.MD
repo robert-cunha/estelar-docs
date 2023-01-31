@@ -16,7 +16,7 @@ curl --location --request POST '{{ESTELAR_API}}/user' \
     "firstName": "Robert",
     "lastName": "Cunha",
     "email": "robert.cunha@estrelabet.com",
-    "password": "kekekekekekeke"
+    "password": "testetesteteste"
 }'
 ```
 
