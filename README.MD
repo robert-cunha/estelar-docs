@@ -70,7 +70,14 @@ curl --location --request POST '{{ESTELAR_API}}/round' \
     "playerInfo": [
         {
             "playerId": 32,
-            "crash": true
+            "crash": true,
+	    "latency": 232,
+	    "oddHalf": 2.1,
+	    "oddFinal": 4.17,
+	    "betValue": 10,
+	    "totalBetWin": 15,
+	    "halfBetWin": 1.3,
+	    "fullBetWin": 1.4
         }
     ]
 }'
